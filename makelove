@@ -1,0 +1,7 @@
+
+#!/usr/bin/env bash
+
+cd project
+zip ../rq.love *
+cd ..
+love rq.love

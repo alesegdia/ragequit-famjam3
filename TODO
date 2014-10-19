@@ -1,0 +1,12 @@
+
+
+arreglar fallo final juego
+enemigos de colores
+medidor de panico, aumenta cuando alguien alrededor muere o es atacado
+	panico = 1, no se mueve
+	panico = 2, te ataca
+	panico = 3, huye
+space to start
+
+CURSOR!!
+
