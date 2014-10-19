@@ -6,3 +6,5 @@ Theme: Misanthropy
 * *gfx*: reb00t
 * *sfx*: rolemusic
 * *dev*: me!
+
+**WARNING!!** The code is a complete mess!
