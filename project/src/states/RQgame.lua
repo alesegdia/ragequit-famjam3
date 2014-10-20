@@ -176,14 +176,14 @@ local computeVision = function(debug)
   debug = debug or false
   if #vision > 0 then
 	local poly = {}
-	print("==========")
+	--print("==========")
 	for k,v in pairs(vision) do
 	  if v.x ~= v.y and v.y ~= 0 then
 		table.insert(poly,v.x)
 		table.insert(poly,v.y)
-		print(v.x)
-		print(v.y)
-		print("")
+		--print(v.x)
+		--print(v.y)
+		--print("")
 	  end
 	  if debug then love.graphics.line(player.pos.x, player.pos.y, v.x, v.y) end
 	end
@@ -406,7 +406,7 @@ local mousepress = false
 local gameparms_file = {}
 
 function RQgame:leave()
-  util.table2json("gameparms.json", gameparms)
+  --util.table2json("gameparms.json", gameparms)
 end
 
 local timer_vol = 0
@@ -417,7 +417,8 @@ function RQgame:enter()
   timer_vol = love.timer.getTime() + 5
   total_enemies = 0
   current_max_enemy_spawn = gameparms.enemy_spawn_max
-  util.json2table("gameparms.json",gameparms_file)
+  --util.json2table("gameparms.json",gameparms_file)
+  gameparms_file = {}
   if #gameparms_file > 0 then gameparms = gameparms_file end
   keyinput = {
   ["up"] = false,
@@ -459,7 +460,7 @@ function RQgame:enter()
 	MakeEnemy(math.random(0,2000),math.random(0,1250))
   end
   player = MakePlayer(200,200)
-  
+
 end
 
 function RQgame:mousepressed(x,y,button)

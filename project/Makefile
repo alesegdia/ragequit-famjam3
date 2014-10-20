@@ -13,6 +13,7 @@ osxapp=/Applications/love.app/
 game=RAGEQUIT
 sources=main.lua src/**/*.lua libs/**/*.lua **/*.lua *.lua
 res=img/*.* music/*.* sfx/*.* # *.ttf
+jsons=*.json
 
 .PHONY : run test love clean win
 
@@ -46,7 +47,7 @@ $(builddir)/$(game).exe : $(builddir)/$(game).love
 
 $(builddir)/$(game).love : $(sources) $(res)
 	mkdir -p $(builddir)
-	$(zip) $(builddir)/$(game).love $(sources) $(res)
+	$(zip) $(builddir)/$(game).love $(sources) $(res) $(jsons)
 
 clean :
 	rm -rf $(builddir)/* $(distdir)/*

@@ -3,12 +3,12 @@ local json = require(LIBRARYPATH.."dkjson")
 
 local util = {
 
-  json2table = function( path )
-	local f,err = io.open(path,"r")
-	local contents,size = love.filesystem.read(path)
+	--local f,err = io.open(path,"r")
 	--if not f then return print(err) end
-	local tbl = json.decode(contents) --f:read("*all"))
 	--f:close()
+  json2table = function( path )
+	local contents,size = love.filesystem.read(path)
+	local tbl = json.decode(contents) --f:read("*all"))
 	return tbl
   end,
 
